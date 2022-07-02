@@ -1,0 +1,15 @@
+[Unit]
+Description=tuerklingel_service
+After=network.target
+
+[Service]
+User=pi
+WorkingDirectory=/usr/local/bin/
+ExecStart=/usr/local/bin/Tuerklingelserver
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+
+
+[Install]
+WantedBy=multi-user.target
